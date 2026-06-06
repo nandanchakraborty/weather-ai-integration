@@ -7,7 +7,9 @@ const weatherRoutes = require("./src/routes/weatherRoutes");
 const webhookRoutes = require("./src/routes/webhookRoutes");
 
 const app = express();
+const cors = require("cors");
 
+app.use(cors());
 app.use(express.json());
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
