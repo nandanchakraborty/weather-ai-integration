@@ -6,18 +6,15 @@ const options = {
     info: {
       title: "Weather AI API",
       version: "1.0.0",
-      description: "Express wrapper for Weather AI with Webhooks"
+      description: "Express wrapper for Weather AI with Webhooks",
     },
     servers: [
-  {
-    url: process.env.NODE_ENV === "production"
-      ? "https://weather-ai-dashboard-api.onrender.com/api"
-      : "http://localhost:5000/api"
-  }
-]
+      {
+        url: "https://weather-ai-dashboard-api.onrender.com/api",
+      },
+    ],
   },
-
-  apis: ["./src/routes/*.js"]
+  apis: ["./src/routes/*.js"],
 };
 
 module.exports = swaggerJSDoc(options);
