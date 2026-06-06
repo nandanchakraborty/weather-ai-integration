@@ -9,10 +9,12 @@ const options = {
       description: "Express wrapper for Weather AI with Webhooks"
     },
     servers: [
-      {
-        url: "http://localhost:5000/api"
-      }
-    ]
+  {
+    url: process.env.NODE_ENV === "production"
+      ? "https://your-app-name.onrender.com/api"
+      : "http://localhost:5000/api"
+  }
+]
   },
 
   apis: ["./src/routes/*.js"]
