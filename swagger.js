@@ -11,7 +11,7 @@ const options = {
     servers: [
   {
     url: process.env.NODE_ENV === "production"
-      ? "https://your-app-name.onrender.com/api"
+      ? "https://weatger-ai-dashboard-api.onrender.com/api"
       : "http://localhost:5000/api"
   }
 ]
